@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Taken is a two column minimalist Jekyll theme.
-
-Taken is based on [chapter tumblr theme.](http://theme-chapter.tumblr.com/)
-
-You can fork taken from [here.](https://github.com/vfalanis/taken)
+> e-mail : taroh777@gmail.com
+> phone : 010-8825-8686
+> nickname : taroh
+> I love sensitive things like music, movie and drawing. foods also.
