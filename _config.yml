@@ -2,7 +2,7 @@
 title: taroh's blog
 email: taroh777@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
-#url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "daehoney.github.io"
 
 # Sidebar settings
 description: "안녕하세요. 반가워요."
