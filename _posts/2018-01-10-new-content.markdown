@@ -3,7 +3,7 @@ layout: post
 title:  "기술 교육 시작과 블로그 개설"
 date:   2018-01-10 23:02:01 -0500
 comments: true
-categories: jekyll
+categories: routine
 ---
 
 일주일이라는 시간이 정말 빠르게 지나갔습니다.
