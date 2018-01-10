@@ -1,11 +1,11 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: taroh's blog
+email: taroh777@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 # Sidebar settings
-description: "안녕하세요. 전대헌입니다."
+description: "안녕하세요. ."
 
 # Social icons
 facebook: username
