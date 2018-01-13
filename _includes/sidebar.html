@@ -1,7 +1,7 @@
 <div class='wrapper'>
 
   <input data-function='swipe' id='swipe' type='checkbox'>
-  <label data-function='swipe' for='swipe' class="btn btn-default" >Menu</label>
+  <label data-function='swipe' for='swipe' class="btn btn-default" style="background-color:#ff0000;">Menu</label>
 
   <div class='content'>
     {{ content }}
@@ -9,7 +9,7 @@
 
   <div class='sidebar menu'>
 
-      <div id="picture" style="background-image: url(logo.jpg); border-radius:100px;"></div>
+      <div id="picture" style="background-image: url({{ site.url }}/logo.jpg); border-radius:100px;"></div>
       <p align="center">{{site.description}}</p>
 
       <hr>
