@@ -4,15 +4,15 @@ layout: default
 
 <div class="post-container">
 
- <h2 class="post-title">Category: {{ page.categories }}</h2>
+ <h2 class="post-title">{{ page.categories }}</h2>
 
  <hr>
 
  {% for post in site.categories[page.categories] %}
    <div class ="post-preview">
-     <span class="post-title">
-       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-         {{ post.title }}
+     <span class="post-title" style="width:100% !important">
+       <a class="post-link" style="width:100% !important" href="{{ post.url | prepend: site.baseurl }}">
+         <h1>{{ post.title }}</h1>
        </a>
      </span>
 
