@@ -215,7 +215,7 @@ input[data-function*='swipe']:checked ~ .sidebar {
   {
     font-family: "Roboto Condensed", Arial, sans-serif;
     background-color: #fff;
-    font-size: 13px;
+    font-size: 14px;
     line-height: normal;
     font-style: normal;
     color: #8C8C8C;
@@ -232,7 +232,7 @@ input[data-function*='swipe']:checked ~ .sidebar {
   li {
     padding: 10px;
     list-style: none;
-    width: 0%;
+    width: 100%;
     line-height: 1.2rem;
     font-weight: 300;
 
@@ -241,10 +241,10 @@ input[data-function*='swipe']:checked ~ .sidebar {
 
       font-family: "Roboto Condensed", Arial, sans-serif;
       background-color: #fff;
-      font-size: 13px;
+      font-size: 14px;
       line-height: normal;
       font-style: normal;
-      color: #8C8C8C;
+      color: #337ab7;
       font-weight: 300;
 
     }
