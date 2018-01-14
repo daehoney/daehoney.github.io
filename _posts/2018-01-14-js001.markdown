@@ -5,7 +5,7 @@ date:   2018-01-14 23:02:01 -0500
 comments: true
 categories: JavaScript
 ---
-<p>
+
 JavaScript 에서는 함수를 생성하는 방법이 크게 3가지가 있다.
 
 1. function
@@ -40,9 +40,12 @@ var showMessage = function(str){
 
 4. 애로우 방식은 생략한다.
 
+<p>
+</p>
 
-
-**주의사항**<br>
+**주의사항**
+<p>
+<br>
 1번 function 방법으로 생성할 경우만 정적 생성이기 때문에 어디서 선언해도 페이지 로딩 후 실행이 가능하지만, <br>2번과 3번 방법의 경우 동적이기 때문에 함수의 선언이 반드시 실행보다 먼저 기술되어야 한다.
 </p>
 
