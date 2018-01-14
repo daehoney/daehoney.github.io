@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JavaScript - 함수(선언 방법과 주의 사항)"
+title:  "JavaScript - 함수(선언 방법과 주의사항)"
 date:   2018-01-14 23:02:01 -0500
 comments: true
 categories: JavaScript
