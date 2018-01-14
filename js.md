@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: categories
 title: JavaScript
 permalink: /js
 ---
