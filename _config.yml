@@ -5,7 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "daehoney.github.io"
 
 # Sidebar settings
-description: "안녕하세요! 반가워요^^"
+description: "NHN Entertainment에서<br>개발자로 근무중인<br>taroh입니다."
 
 # Social icons
 facebook: username
@@ -14,7 +14,7 @@ github: username
 deviantart: username
 codepen: username
 
-footer: NHN Entertainment
+footer: Since 2018
 
 # Build settings
 markdown: kramdown
