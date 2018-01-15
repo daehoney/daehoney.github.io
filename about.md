@@ -6,8 +6,10 @@ permalink: /about/
 
 > e-mail : taroh777@gmail.com
 
-> phone : 010-8825-8686
+> 별명 : 타로(taroh)
 
-> nickname : taroh
+> 취미 : 음악감상, 노래부르기, 영화감상, 그림그리기.
 
-> I love sensitive things like music, movie and drawing. foods also.
+> 회사 : NHN Entertainment
+
+> 업무 : Software development
