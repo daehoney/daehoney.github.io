@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "MySQL LIMIT offset performance"
+date:   2018-01-14 23:02:01 -0500
+comments: true
+categories: MySQL
+---
+
+# 페이지네이션 구현 시 LIMIT 속도 저하 문제 해결 방법
+
+페이지네이션 구현 시 MySQL에서 LIMIT를 사용하여 구현할 생각이었으나,
+
+더 좋은 방법을 찾아본 결과, JOIN을 활용하는 것이 데이터가 많아질수록 효과적이라는 자료를 찾았습니다.
+
+링크를 공유합니다.
+
+MySQL LIMIT offset performance
