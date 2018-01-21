@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MySQL LIMIT offset performance"
-date:   2018-01-14 23:02:01 -0500
+date:   2018-01-21 18:02:01 -0500
 comments: true
 categories: MySQL
 ---
