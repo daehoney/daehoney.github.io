@@ -16,14 +16,20 @@ categories: MySQL
 
 [MySQL LIMIT offset performance](http://devoluk.com/mysql-limit-offset-performance.html)
 
-*원인 및 해결 방법 요약
+> 원인 및 해결 방법 요약
 
-쿼리가 첫 번째 OFFSET + LIMIT 레코드를 계산해야하기 때문에 오프셋을 높게 설정하면 쿼리 속도가 느려지는 것이 일반적입니다 (그 중 LIMIT 만 사용). 이 값이 높을수록 쿼리 실행 시간이 길어집니다.
+쿼리가 첫 번째 OFFSET + LIMIT 레코드를 계산해야하기 때문에 오프셋을 높게 설정하면
+쿼리 속도가 느려지는 것이 일반적입니다 (그 중 LIMIT 만 사용).
+이 값이 높을수록 쿼리 실행 시간이 길어집니다.
 
-첫째, 레코드의 길이가 다를 수 있으며 둘째, 삭제 된 레코드의 갭이있을 수 있기 때문에 쿼리를 OFFSET 으로 바로 이동할 수 없습니다. 그것은 각 레코드를 확인하고 계산해야합니다.
+첫째, 레코드의 길이가 다를 수 있으며 둘째, 삭제 된 레코드의 갭이있을 수 있기 때문에
+쿼리를 OFFSET 으로 바로 이동할 수 없습니다.
+그것은 각 레코드를 확인하고 계산해야합니다.
 
-id 가 MyISAM 테이블의 PRIMARY KEY 라고 가정하면이 트릭을 사용하여 속도를 높일 수 있습니다 :
+id 가 MyISAM 테이블의 PRIMARY KEY 라고 가정하면
+트릭을 사용하여 속도를 높일 수 있습니다 :
 
+```mysql
 SELECT  t.*
 FROM    (
         SELECT  id
@@ -34,3 +40,9 @@ FROM    (
         ) q
 JOIN    mytable t
 ON      t.id = q.id
+```
+
+# 추가 사항
+
+> mysql 4.1버전 이 후부터는 password() 함수의 해시값 길이가 41bytes 라고 한다.
+> 비밀번호를 암호화한 후 저장하기 위해서는 해당 컬럼 사이즈를 41바이트 이상으로 잡아주어야한다. 
