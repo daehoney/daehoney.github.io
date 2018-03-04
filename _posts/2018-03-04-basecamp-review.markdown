@@ -76,7 +76,7 @@ categories: routine
  * 내가 맡은 업무
    1. 메일 쓰기(새 메일, 임시저장, 이어쓰기, 답장)
    2. 첨부파일 업로드
-   3. 메일 리스트 pagenation
+   3. 메일 리스트 pagination
    4. 외부 로그인 연동
    5. 추가 기능 - 페이코 로그인 연동
 3. github와 soucetree를 통한 협업
