@@ -79,7 +79,7 @@ categories: routine
    3. 메일 리스트 pagination
    4. 외부 로그인 연동
    5. 추가 기능 - 페이코 로그인 연동
-3. github와 soucetree를 통한 협업
+3. github와 Sourcetree를 통한 협업
 4. jenkins를 활용한 그룹웨어 리팩토링
  * 내가 맡은 업무
    1. critical, review, warning 등을 줄이는 작업
