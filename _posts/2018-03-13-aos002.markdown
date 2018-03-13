@@ -1,0 +1,120 @@
+---
+layout: post
+title:  "Android Studio 단축키"
+date:   2018-03-13 15:30:01 -0500
+comments: true
+categories: Android
+---
+
+# Windows/Linux 및 Mac 운영체제에 대한 기본 단축키
+
+| 설명 | Windows/Linux | Mac |
+| --- | ------------- | --- |
+| 일반 |  |  |
+| 모두 저장 | Control + S | Command + S |
+| 동기화 | Control + Alt + Y | Command + Option + Y |
+| 편집기 최대화/최소화 | Control + Shift + F12 | Control + Command + F12 |
+| 즐겨찾기에 추가 | Alt + Shift + F | Option + Shift + F |
+| 현재 프로필로 현재 파일 검사 | Alt + Shift + I | Option + Shift + I |
+| 빠른 전환 구성표 | Control + `(역따옴표) | Control +` (역따옴표) |  |
+| 설정 대화상자 열기 | Control + Alt + S | Command + , (쉼표) |
+| 프로젝트 구조 대화상자 열기 | Control + Alt + Shift + S | Command + ; (세미콜론) |
+| 탭과 도구 창 간의 전환 | Control + Tab | Control + Tab |
+| Studio 내에서 탐색 및 검색 |  |  |
+| 모든 항목 검색(코드와 메뉴 포함) | Shift 키를 두 번 누름 | Shift 키를 두 번 누름 |
+| 찾기 | Control + F | Command + F |
+| 다음 찾기 | F3 | Command + G |
+| 이전 찾기 | Shift + F3 | Command + Shift + G |
+| 바꾸기 | Control + R | Command + R |
+| 작업 찾기 | Control + Shift + A | Command + Shift + A |
+| 기호 이름으로 검색 | Control + Alt + Shift + N | Command + Option + O |
+| 클래스 찾기 | Control + N | Command + O |
+| (클래스 대신에) 파일 찾기 | Control + Shift + N | Command + Shift + O |
+| 경로에서 찾기 | Control + Shift + F | Command + Shift + F |
+| 파일 구조 팝업 열기 | Control + F12 | Command + F12 |
+| 열린 편집기 탭 사이에서 탐색 | Alt + 오른쪽/왼쪽 화살표 | Control + 오른쪽/왼쪽 화살표 |
+| 소스로 이동 | F4 / Control + Enter | F4 / Command + 아래쪽 화살표 |
+| 새 창에서 현재 편집기 탭 열기 | Shift + F4 | Shift + F4 |
+| 최근에 연 파일 팝업 | Control + E | Command + E |
+| 최근에 편집한 파일 팝업 | Control + Shift + E | Command + Shift + E |
+| 마지막 편집 위치로 이동 | Control + Shift + 백스페이스 | Command + Shift + 백스페이스 |
+| 활성 편집기 탭 닫기 | Control + F4 | Command + W |
+| 도구 창에서 편집기 창으로 돌아가기 | Esc | Esc |
+| 활성 또는 마지막 활성 도구 창 숨기기 | Shift + Esc | Shift + Esc |
+| 줄 이동 | Control + G | Command + L |
+| 유형 계층 구조 열기 | Control + H | Control + H |
+| 메서드 계층 구조 열기 | Control + Shift + H | Command + Shift + H |
+| 호출 계층 구조 열기 | Control + Alt + H | Control + Option + H |
+| 코드 쓰기 |  |  |
+| 코드 생성(getter, setter, constructor, hashCode/equal, toString, new file, new class) | Alt + Insert | Command + N |
+| 메서드 재정의 | Control + O | Control + O |
+| 메서드 구현 | Control + I | Control + I |
+| 코드 감싸기(if...else / try...catch 등) | Control + Alt + T | Command + Option + T |
+| 캐럿(^)에서 줄 삭제 | Control + Y | Command + 백스페이스 |
+| 현재 코드 블록 접기/펼치기 | Control + 빼기/더하기 기호(－/＋) | Command + 빼기/더하기 기호(－/＋) |
+| 모든 코드 블록 접기/펼치기 | Control + Shift + 빼기/더하기 기호(－/＋) | Command + Shift + 빼기/더하기 기호(－/＋) |
+| 현재 줄 또는 선택 항목 중복 | Control + D | Command + D |
+| 기본 코드 완성 | Control + 스페이스 | Control + 스페이스 |
+| 스마트 코드 완성(예상 형식을 기준으로 메서드 및 변수 목록 필터링) | Control + Shift + 스페이스 | Control + Shift + 스페이스 |
+| 명령문 완성 | Control + Shift + Enter | Command + Shift + Enter |
+| 빠른 문서 조회 | Control + Q | Control + J |
+| 선택한 메서드에 대한 매개변수 표시 | Control + P | Command + P |
+| 선언으로 이동(직접) | Control + B 또는 Control + 클릭 | Command + B 또는 Command + 클릭 |
+| 구현으로 이동 | Control + Alt + B | Command + Alt + B |
+| 슈퍼메서드/슈퍼클래스 | Control + U | Command + U |
+| 빠른 정의 조회 열기 | Control + Shift + I | Command + Y |
+| 프로젝트 도구 창 표시 여부 전환 | Alt + 1 | Command + 1 |
+| 북마크 전환 | F11 | F3 |
+| 니모닉으로 북마크 전환 | Control + F11 | Option + F3 |
+| 줄 주석으로 주석 처리/주석 처리 제거 | Control + / | Command + / |
+| 블록 주석으로 주석 처리/주석 처리 제거 | Control + Shift + / | Command + Shift + / |
+| 계속 증가하는 코드 블록 선택 | Control + W | Option + Up |
+| 현재 선택 항목을 이전 상태로 감소 | Control + Shift + W | Option + Down |
+| 코드 블록 시작으로 이동 | Control + [ | Option + Command + [ |
+| 코드 블록 끝으로 이동 | Control + ] | Option + Command + ] |
+| 코드 블록 시작까지 선택 | Control + Shift + [ | Option + Command + Shift + [ |
+| 코드 블록 끝까지 선택 | Control + Shift + ] | Option + Command + Shift + ] |
+| 단어 끝까지 삭제 | Control + Delete | Option + Delete |
+| 단어 시작까지 삭제 | Control + 백스페이스 | Option + 백스페이스 |
+| 가져오기 최적화 | Control + Alt + O | Control + Option + O |
+| 프로젝트 빠른 수정(의도한 작업과 빠른 수정 사항 표시) | Alt + Enter | Option + Enter |
+| 코드 서식 다시 지정 | Control + Alt + L | Command + Option + L |
+| 줄 자동 들여쓰기 | Control + Alt + I | Control + Option + I |
+| 줄 들여쓰기/들여쓰기 해제 | Tab/Shift + Tab | Tab/Shift + Tab |
+| 스마트 선 이음 | Control + Shift + J | Control + Shift + J |
+| 스마트 선 분할 | Control + Enter | Command + Enter |
+| 새 줄 시작 | Shift + Enter | Shift + Enter |
+| 다음/이전 강조표시된 오류 | F2 / Shift + F2 | F2 / Shift + F2 |
+| 빌드 및 실행 |  |  |
+| 빌드 | Control + F9 | Command + F9 |
+| 빌드 및 실행 | Shift + F10 | Control + R |
+| 디버깅 |  |  |
+| 디버그 | Shift + F9 | Control + D |
+| Step over | F8 | F8 |
+| Step into | F7 | F7 |
+| 스마트 Step into | Shift + F7 | Shift + F7 |
+| Step out | Shift + F8 | Shift + F8 |
+| 커서까지 실행 | Alt + F9 | Option + F9 |
+| 식 평가 | Alt + F8 | Option + F8 |
+| 프로그램 재개 | F9 | Command + Option + R |
+| 중단점 전환 | Control + F8 | Command + F8 |
+| 중단점 보기 | Control + Shift + F8 | Command + Shift + F8 |
+| 리팩터링 |  |  |
+| 복사 | F5 | F5 |
+| 이동 | F6 | F6 |
+| 안전하게 삭제 | Alt + Delete | Command + Delete |
+| 이름 바꾸기 | Shift + F6 | Shift + F6 |
+| 서명 변경 | Control + F6 | Command + F6 |
+| 인라인 | Control + Alt + N | Command + Option + N |
+| 메서드 추출 | Control + Alt + M | Command + Option + M |
+| 변수 추출 | Control + Alt + V | Command + Option + V |
+| 필드 추출 | Control + Alt + F | Command + Option + F |
+| 상수 추출 | Control + Alt + C | Command + Option + C |
+| 매개변수 추출 | Control + Alt + P | Command + Option + P |
+| 버전 제어/로컬 기록 |  |  |
+| VCS에 프로젝트 커밋 | Control + K | Command + K |
+| VCS에서 프로젝트 업데이트 | Control + T | Command + T |
+| 최근 변경 내용 보기 | Alt + Shift + C | Option + Shift + C |
+| VCS 팝업 열기 | Alt + ` (역따옴표) | Control + V |
+
+출처 [안드로이드 스튜디오 공식 사이트](https://developer.android.com/studio/intro/keyboard-shortcuts.html)

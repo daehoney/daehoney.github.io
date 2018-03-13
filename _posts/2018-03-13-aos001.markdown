@@ -1,0 +1,130 @@
+---
+layout: post
+title:  "Android 기초 정리"
+date:   2018-03-13 15:20:01 -0500
+comments: true
+categories: Android
+---
+
+# 개발 환경 구축하기
+    * JDK, Java SE, Android Studio를 설치한다.
+# 안드로이드 프로젝트의 기본 구성(액티비티, xml, gradle)
+    * 액티비티(java 파일이며, 한 화면 내에서의 동작을 나타냄)
+
+``` Java
+
+package org.androidtown.hello;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+   }
+
+   public void onButton1Clicked(View v){
+       Intent myIntent = new Intent(Intent.ACTION_VIEW,  Uri.parse("http://m.naver.com"));
+       startActivity(myIntent);
+   }
+
+   public void onButton2Clicked(View v){
+       Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:010-1000-1000"));
+       startActivity(myIntent);
+   }
+
+   public void onButton3Clicked(View v){
+       Intent myIntent = new Intent(getApplicationContext(), MenuActivity.class);
+       startActivity(myIntent);
+   }
+}
+
+```
+
+* xml 파일(화면을 구성, 배치하는 레이아웃)
+
+``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.hello.MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onButton1Clicked"
+        android:text="네이버로 접속하기"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="onButton2Clicked"
+        android:text="전화 걸기"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="onButton3Clicked"
+        android:text="새화면 띄우기"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        tools:layout_editor_absoluteY="16dp" />
+</android.support.constraint.ConstraintLayout>
+
+```
+
+* gradle 파일(타겟 버전 등을 정하는 설정 파일)
+
+``` gradle
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "org.androidtown.hello"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+```
+
+# 에뮬레이터나 실제 디바이스를 USB로 연결하여 테스트 가능하다.
+    * 드라이버 설치 필요

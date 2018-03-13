@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "MultiDexApplication"
+date:   2018-03-13 15:30:01 -0500
+comments: true
+categories: Android
+---
+
+# MultiDexApplication은 왜 사용하는가?
+
+이것에 대해서 이해하기 위해서는 Dex가 무엇인지 알아야한다.
+
+그리고 Dex에 대해서 설명하기 위해서는 안드로이드가 빌드되는 과정을 설명해야한다.
+
+안드로이드가 빌드되는 과정을 살펴보면 다음과 같다.
+<img src="http://cfile23.uf.tistory.com/image/225CC63B54DEB6540B5F3E">
+출처 : http://codedragon.tistory.com/1173
+
+먼저, 안드로이드 프로젝트를 구성하고 있는 파일의 종류는
+1. java 코드
+2. manifest 파일 (앱의 구성 요소, 권한 등을 정의)
+3. resource 파일 (레이아웃 xml 파일, 이미지 파일, values와 같은 문자열 등)
+
+등이 있으며, (build 나 assets과 같은 폴더도 있으나 여기선 생략)
+
+컴파일을 할 때는 javac compiler와 dex tool이 사용되고,
+
+패키징을 할 때는 aapt tool을 사용한다.
+
+javac compiler는 알다시피 java파일을 컴파일해서 class파일을 생성해주는데,
+
+안드로이드는 일반적인 JVM이 아닌 DVM(Dalvik virtual machine)을 통해
+
+실행되기 때문에 컴파일된 class파일을 다시 DVM에서 실행 가능한 dex파일로
+
+만들어줘야한다. (dex 는 Dalvik excutable의 약자이다.)
+
+이 때, class파일을 dex파일로 변환해주는 도구가 dex tool이다. (dx라고도 한다)
+
+마지막으로 aapt tool은 이렇게 컴파일된 dex파일과 함께 resource 파일을 묶어서
+
+(resource 파일은 필요시 바이너리 파일로 변환), apk 파일로 패키징을하게 되는 것이다.
+
+그럼 이제 본론으로 돌아가서 MultiDexApplication은 왜 사용하는지 설명해보자면,
+
+하나의 dex파일의 메서드 최대 개수는 65K(65,536)개로 제약되어 있는데,
+
+만일 개발하고 있는 프로젝트의 메서드 최대 개수가 65K를 넘는 경우에는
+
+하나의 dex파일로 변환할 수가 없기 때문에 여러개의 dex파일로 변환하기 위해서
+
+MultiDexApplication 을 사용하는 것이다.
+
