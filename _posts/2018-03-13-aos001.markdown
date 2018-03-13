@@ -7,15 +7,15 @@ categories: Android
 ---
 
 # 개발 환경 구축하기
-    * JDK, Java SE, Android Studio를 설치한다.
+
+* JDK, Java SE, Android Studio를 설치한다.
 
 
 # 안드로이드 프로젝트의 기본 구성(액티비티, xml, gradle)
-   
-   
-    * 액티비티(java 파일이며, 한 화면 내에서의 동작을 나타냄)
 
-``` Java
+* 액티비티(java 파일이며, 한 화면 내에서의 동작을 나타냄)
+
+```Java
 
 package org.androidtown.hello;
 
