@@ -11,6 +11,8 @@ categories: Android
 
 
 # 안드로이드 프로젝트의 기본 구성(액티비티, xml, gradle)
+   
+   
     * 액티비티(java 파일이며, 한 화면 내에서의 동작을 나타냄)
 
 ``` Java
