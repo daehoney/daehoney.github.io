@@ -51,3 +51,34 @@ javac compiler는 알다시피 java파일을 컴파일해서 class파일을 생�
 
 MultiDexApplication 을 사용하는 것이다.
 
+# MultiDexApplication은 어떻게 사용하는가?
+
+1. AndroidManifest.xml 파일에서 해당 class를 application으로 선언
+2. MultiDexApplication 을 extends 해준다.
+3. 다음 코드를 오버라이드 한다.
+```Java
+protected void attachBaseContext(Context base) {
+super.attachBaseContext(base);
+MultiDex.install(this);
+}
+```
+
+
+# MultiDexApplication.class는 이렇게 생겼다.
+
+```Java
+package android.support.multidex;
+
+import android.app.Application;
+import android.content.Context;
+
+public class MultiDexApplication extends Application {
+    public MultiDexApplication() {
+    }
+
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+}
+```

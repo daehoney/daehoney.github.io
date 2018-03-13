@@ -8,6 +8,8 @@ categories: Android
 
 # 개발 환경 구축하기
     * JDK, Java SE, Android Studio를 설치한다.
+
+
 # 안드로이드 프로젝트의 기본 구성(액티비티, xml, gradle)
     * 액티비티(java 파일이며, 한 화면 내에서의 동작을 나타냄)
 
@@ -125,6 +127,7 @@ dependencies {
 }
 
 ```
+
 
 # 에뮬레이터나 실제 디바이스를 USB로 연결하여 테스트 가능하다.
     * 드라이버 설치 필요
