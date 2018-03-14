@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "Activity Life Cycle"
+date:   2018-03-14 10:40:01 -0500
+comments: true
+categories: Android
+---
+
+# Activity와 Activity의 Life Cycle
+
+안드로이드에서 화면을 구성하는 레이아웃(위치, 모양, 크기 등)은 보통 xml이 담당하지만,
+
+해당 화면에 xml을 적용하고, 사용자와 상호작용을 하는 것은 java 클래스인 Activity가 담당한다.
+
+Activity가 하나의 화면이라고 생각하면 이해하기가 쉬울 것이다.
+
+Activity는 사용자의 조작에 따라서 생성되었다가, 일시정지했다가, 다시 실행되기도 하며,
+
+완전히 사용하지 않게되어 메모리에서 사라지기도 한다.
+
+이러한 Activity의 상태가 마치 태어났다가 죽는 것처럼 보이기 때문에 이러한 주기를
+
+Activity의 생명주기라고 한다.
+
+# Activity의 생명주기
+
+<img src="http://cfile1.uf.tistory.com/image/267F5D4C52E5EEC6325F50">
+
+출처 : http://biig.tistory.com/43
+
+Activity는 사용자가 최초로 특정 화면을 실행했을 때 만들어진다.
+
+onCreate() 메서드가 최초로 해당 화면에 들어왔을 때 실행되고,
+
+다음으로 onStart(), onResume() 메서드가 차례대로 실행된 다음에야
+
+비로소 실질적으로 Activity에 정의된 코드가 실행된다.
+
+그러면 왜! onCreate() 메서드 하나로 퉁치지 않고, 이렇게 세 가지나 연속으로 실행되냐!
+
+궁금해진다.
+
+그래서 위의 그림을 보며 생각을 해본 결과,
+
+최초로 실행했을 때는 무조건 onCreate() 메서드부터 실행되지만,
+
+사용자가 잠시 다른 앱을 사용하고 다시 돌아왔을 때는
+
+onPause()를 실행하여 일시정지한 상태이기 때문에
+
+onCreate()가 아닌 onResume()이 실행된다.
+
+onStart()의 경우에는 onStop()이 실행되고 나서 다시 돌아왔을 때
+
+onStart() -> onResume() 순서로 실행되며,
+
+메모리에서 완전히 삭제되는 onDestroy() 메서드가 실행된 후에야
+
+다시 onCreate() 메서드부터 실행하게된다.
+
+만약 로딩화면을 onCreate()가 아닌 onResume()이나 onStart()에 하게되면,
+
+잠깐 메신저를 확인하고 왔는데, 다시 로딩 페이지를 봐야하는 경우가 생길 수 있는 것이다.
+
+onCreate() -> onStart() -> onResume() -> onPause() -> onStop() -> onDestroy()
+
+기본은 이 순서이고, 한번 실행된 후에 다시 실행될 때는 조건에 따라서,
+
+onPause() -> onResume()
+
+onStop() -> onStart() -> onResume()
+
+onDestroy() -> onCreate() -> onStart() -> onResume()
+
+순서로 실행된다는 것만 이해하면 된다.
