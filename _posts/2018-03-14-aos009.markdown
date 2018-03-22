@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "실무에 바로 적용하는 안드로이드 프로그래밍#3"
+date:   2018-03-22 16:30:01 -0500
+comments: true
+categories: Android
+---
+
+# 3장. 액티비티 생명주기
+
+* 생명주기 - 실행, 일시 중지, 중단
+
+* 기기를 가로, 세로로 돌리게되면 Activity가 destoroied 되었다가 다시 create 된다.
+
+* 사용자가 뒤로가기 버튼을 누르면, 해당 Acticity는 destroied 된다.
+
+* 사용자가 home 키를 누를 경우, Activity는 Pause 상태.
+
+단, 메모리가 부족할 경우 임의의 Activity가 소멸될 수 있는 상태이다.
+
+* 화면 회전 시 다시 초기화되는 문제나, 오랫동안 일시정지 시 초기화되는 경우에 어떻게
+
+사용하던 데이터를 그대로 보존해서 다시 로드할 수 있을까?
+
+```Java
+@Override
+public void onSaveInstanceState(Bundle savedInstanceState){
+    super.onSaveInstanceState(savedInstanceState);
+    Log.i(TAG, "onSaveInstanceState");
+    savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
+}
+```
+위 코드처럼 onSaveInstanceState 메소드를 오버라이드하여 savedInstanceState 라는 번들에 저장할 수 있다.
+
+Key와 Value로 저장할 수 있으며, 나중에 onCreate에서 Bundle을 확인하여 사용할 수 있다.
+
+이렇게 저장할 수 있는 이유는, 액티비티가 일시 정지나 중단될 경우 onSaveInstanceState가 실행되기 때문이다.
+
+개발을 할 때에는 onPause()와 onSaveInstanceState() 메소드 두 가지에 의존하여 코드를 작성하면 된다.
+
+현재 Activity에서 보존해야할 작은 데이터들은 Bundle에 저장하고, 이외의 것들은 onPause()에서 처리한다.
+
+AOS는 Bundle에 저장된 값을 Activity 레코드로 가지고 있으며, Activity나 Application이 완전히 종료되더라도
+
+Bundle에 있는 데이터를 가지고 복구할 수 있다.
+
+Activity 레코드가 완전히 폐기되는 순간은 사용자가 Back 버튼으로 Activity를 종료하거나
+
+디바이스가 재부팅되는 경우 뿐이다. 이외에 메모리 부족 등으로 삭제되는 경우 등은 레코드가 유지된다.
+
+
+* 로그 레벨
+
+안드로이드에서 로깅하기 위해서 Log 클래스 메서드를 사용하는데, 로그의 레벨을 제어할 수 있다.
+
+```Java
+Log.e(TAG, "error occured!"); // 에러
+Log.w(TAG, "warning!"); // 경고
+Log.i(TAG, "information of...") // 정보성 메시지
+Log.d(TAG, "debugging...is it works?"); // 디버깅 출력, 필터링 가능.
+Log.v(TAG, "verbose"); // 개발 전용!~
+```
