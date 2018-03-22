@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "실무에 바로 적용하는 안드로이드 프로그래밍#0"
+date:   2018-03-22 10:20:01 -0500
+comments: true
+categories: Android
+---
+
+# 책을 읽으며 기억해 두어야 할 것들을 정리할 예정
+
