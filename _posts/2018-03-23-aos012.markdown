@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "실무에 바로 적용하는 안드로이드 프로그래밍#6"
+date:   2018-03-23 12:00:01 -0500
+comments: true
+categories: Android
+---
+
+# 6장. 안드로이드 SDK 버전과 호환성
+
+  개발자는 다양한 안드로이드 버전에서 잘 동작하는 앱을 만들어야한다.
+
+  * SDK Version = API Level 같은 말.
+
+  * gradle - Android Studio 가 사용하는 프로젝트 자동화 빌드 시스템
+
+  * 최소 SDK 버전 (minSdkVersion) - 앱이 실행되기 위한 최소 Sdk 버전.
+
+  * 목표 SDK 버전 (targetSdkVersion) - 보통 최신 버전을 목표로 개발한다.
+
+  * 컴파일 SDK 버전 (compileSdkVersion) - 프로젝트 빌드 시 사용할 Sdk 버전(최신 버전이 좋음).
+
+  * 최신 버전의 기술을 사용하고 싶은데, 하위 버전을 사용하는 디바이스에 서비스도 제공하고 싶다면,
+    장치의 안드로이드 버전을 확인하는 조건문으로 상위 버전 API 코드를 감싸는 방법을 쓴다.
+
+    ```Java
+    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) // 롤리팝 이상이라면 true.
+    ```
+
+
