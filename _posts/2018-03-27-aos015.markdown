@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "실무에 바로 적용하는 안드로이드 프로그래밍#9"
+date:   2018-03-27 15:00:01 -0500
+comments: true
+categories: Android
+---
+
+# 9장. RecyclerView로 리스트 보여주기
+
+## RecycleView의 용도
+
+> RecyclerView는 리스트를 표현할 때 사용한다. 특히 리스트에 포함되어 있는 각각의 뷰들이
+> 동일한 레이아웃을 반복적으로 사용할 때 유리하다. RecyclerView의 특징은,
+> 스크롤을 내리며 봐야하는 많은 데이터를 포함하는 리스트의 경우, 화면에 보여질만큼만 뷰를 만들고,
+> 스크롤을 내릴 때, 사라지는 인스턴스를 가지고 있다가 다음에 나타날 부분에 재활용하는 것이다.
+
+## RecyclerView의 구성
+
+* RecyclerView
+* LayoutManager
+* ViewHolder
+* Adapter
+* View
+* Data
+
+## RecyvlerView의 동작 원리
+
+* 재료 - 리스트에 표시될 Data, Data를 표현할 한 가지 이상의 View
+
+1. ViewHolder는 하나의 View를 inflate한다.
+2. Adapter는 Data를 알맞은 ViewHolder에 담는다.
+3. LayoutManager는 화면의 알맞은 위치에 View를 만들어 준다.
+4. RecyclerView는 Adapter가 ViewHolder를 새로 만들어서 쓸지, 재활용할지 결정한다.
+
+## RecyclerView의 주의사항?
+
+> RecyclerView의 Adapter는 단일 스레드 기반이므로, 영향을 주는 list는
+> Main thread에서만 변경해야 정상 동작한다.
+
+## 추가사항
+
+* Item decorations
+* Item Anomator
+
+위 두 가지에 대해서 조사하기.
+
+
