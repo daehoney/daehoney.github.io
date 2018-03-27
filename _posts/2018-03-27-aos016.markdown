@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "실무에 바로 적용하는 안드로이드 프로그래밍#10"
+date:   2018-03-27 17:00:01 -0500
+comments: true
+categories: Android
+---
+
+# 10장. 프래그먼트 인자 사용하기
+
+## 프래그먼트 인자?
+
+* 액티비티에서 다른 액티비티를 시작할 때, Intent로 데이터를 전달하듯, 프래그먼트에서 
+  액티비티 또는 프래그먼트로 데이터를 전달하는 방법 중 하나이다.
+
+* 프래그먼트에서 데이터를 액티비티로 전달하는 것은 액티비티와 동일하다.
+
+* 즉, Intent를 만들어서 Fragment.startActivity(Intent) 로 전달한다.
+
+* 다음에 실행되는 Activity에서는 intent로 받은 후, 프래그먼트를 생성하면서 데이터를
+  매개변수로 넘겨주면 된다.
+
+* 프래그먼트 인자는 Bundle로 만들어서 fragment.setArgument(Bundle)로 전달한다.
+
+* 단, 프래그먼트의 인자를 다루는 순서는 지켜주어야 한다.
+
+* 순서: 프래그먼트 생성 -> 프래그먼트 인자 생성 -> 프래그먼트를 액티비티에 추가.
+
+* 프래그먼트에서 다음 번에 실행된 액티비티가 종료된 후 그 결과를 갱신하는(결과를 받는) 방법은
+  액티비티와 동일하게 Fragment.startActivityForResult()로 액티비티를 실행하고,
+  결과를 받을 때는 Fragment.onActivityResult()로 결과를 받을 수 있다.
+
+* 단, 다음 번에 실행될 액티비티에서 호스팅되는 프래그먼트에서는 setResult 메서드가 제공되지 않고,
+  getActivity().setResult(Activity.RESULT_OK,null) 와 같은식으로 사용해야 합니다.
+
